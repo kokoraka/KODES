@@ -78,23 +78,23 @@ ul.left-navbar > li {
 
 quote.nosifer {
   font-size: 22pt;
-  font-family: 'Nosifer', cursive;
+  font-family: 'Nosifer', 'Arial', cursive;
 }
 
 quote.msmincho {
   font-size: 40pt;
-  font-family: 'MS Mincho', sans-serif;
+  font-family: 'MS Mincho', 'Arial', sans-serif;
   font-weight: bold;
 }
 
 quote.parisienne {
   font-size: 20pt;
-  font-family: 'Parisienne', cursive;
+  font-family: 'Parisienne', 'Arial', cursive;
 }
 
 quote.rochester {
   font-size: 18pt;
-  font-family: 'Rochester', cursive;
+  font-family: 'Rochester', 'Arial', cursive;
 }
 
 quote.rochester > small {
@@ -103,7 +103,7 @@ quote.rochester > small {
 
 quote.playfair {
   font-size: 14pt;
-  font-family: 'Playfair Display', cursive;
+  font-family: 'Playfair Display', 'Arial', cursive;
 }
 
 quote.playfair > small {
@@ -118,6 +118,10 @@ div.menu {
   margin-top: 10px;
 }
 
+div.menu > img:hover {
+  cursor: pointer;
+}
+
 h2.menu-title {
   font-size: 16pt;
 }
@@ -125,13 +129,11 @@ h2.menu-title {
 #navbar {
   background-color: #fbfbfb;
   padding-top:50px;
-  min-height: 90vh;
 }
 
 #content {
   background-color: #f2f2f2;
   padding-top:50px;
-  min-height: 90vh;
 }
 
 #footer {
@@ -150,7 +152,10 @@ h2.menu-title {
 .obj-center {
   margin: auto;
   width: 50%;
-  padding: 10px;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .mrg-top-0 {
@@ -178,10 +183,94 @@ h2.menu-title {
 */
 
 .row{
-    overflow: hidden;
+  overflow: hidden;
 }
 
 [class*="col-"]{
-    margin-bottom: -99999px;
-    padding-bottom: 99999px;
+  margin-bottom: -99999px;
+  padding-bottom: 99999px;
+}
+
+/*
+  https://www.w3schools.com/howto/howto_css_modals.asp
+*/
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content {
+  position: fixed;
+  bottom: 0;
+  background-color: #fefefe;
+  width: 100%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+  color: #ffffff;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #fefefe;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #2c3e50;
+  color: #fefefe;
+}
+
+.modal-body {
+  padding: 2px 16px;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #2c3e50;
+  color: #fefefe;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
 }

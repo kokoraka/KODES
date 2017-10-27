@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/slick/slick.css" />
     <link rel="stylesheet" href="assets/custom/css/general.css" />
     <link rel="icon" type="image/x-icon" href="resources/img/favicon.png" />
     <title>LENGKO - Gallery</title>
@@ -37,47 +38,42 @@
         <div id="content" class="col-md-10">
 
           <div class="row mrg-btm-30">
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6">
               <div class="menu">
-                <img src="resources/img/menus/img4-nasi-tutug-oncom-bandung.jpg" alt="Nasi Tutug Oncom Bandung" width="100%" height="" />
-                <h2 class="menu-title">Nasi Tutug Oncom Bandung</h2>
-                <a href="#" class="pull-right"><i class="material-icons">more_horiz</i></a>
+                <img src="resources/img/menus/img4-nasi-tutug-oncom-tasikmalaya.jpg" onclick="get_menu('menu-1')" alt="Nasi Tutug Oncom Bandung" width="100%" height="" />
+                <h2 class="menu-title">Nasi Tutug Oncom Tasikmalaya</h2>
+                <a href="#menu-1" onclick="get_menu('menu-1');" class="pull-right"><i class="material-icons">more_horiz</i></a>
                 <br />
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6">
               <div class="menu">
-                <img src="resources/img/menus/img1-lengko-cirebon.jpg" alt="Nasi Lengko Cirebon" width="100%" height="" />
+                <img src="resources/img/menus/img1-lengko-cirebon.jpg" onclick="get_menu('menu-2')" alt="Nasi Lengko Cirebon" width="100%" height="" />
                 <h2 class="menu-title">Nasi Lengko Cirebon</h2>
-                <a href="#" class="pull-right"><i class="material-icons">more_horiz</i></a>
+                <a href="#menu-2" onclick="get_menu('menu-2')" class="pull-right"><i class="material-icons">more_horiz</i></a>
                 <br />
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6">
               <div class="menu">
-                <img src="resources/img/menus/img2-rendang-padang.jpg" alt="Nasi Lengko Cirebon" width="100%" height="" />
+                <img src="resources/img/menus/img2-rendang-padang.jpg" onclick="get_menu('menu-3')" alt="Nasi Lengko Cirebon" width="100%" height="" />
                 <h2 class="menu-title">Rendang Padang</h2>
-                <a href="#" class="pull-right"><i class="material-icons">more_horiz</i></a>
+                <a href="#menu-3" onclick="get_menu('menu-3')" class="pull-right"><i class="material-icons">more_horiz</i></a>
                 <br />
               </div>
             </div>
-
-          </div>
-
-          <div class="row mrg-btm-30">
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6">
               <div class="menu">
-                <img src="resources/img/menus/img3-gudeg-yogyakarta.jpg" alt="Nasi Lengko Cirebon" width="100%" height="" />
+                <img src="resources/img/menus/img3-gudeg-yogyakarta.jpg" onclick="get_menu('menu-4')" alt="Nasi Lengko Cirebon" width="100%" height="" />
                 <h2 class="menu-title">Gudeg Yogyakarta</h2>
-                <a href="#" class="pull-right"><i class="material-icons">more_horiz</i></a>
+                <a href="#menu-4" onclick="get_menu('menu-4')" class="pull-right"><i class="material-icons">more_horiz</i></a>
                 <br />
               </div>
             </div>
-
           </div>
 
           <div class="row mrg-btm-30">
-            <div class="col-md-push-4 col-md-4">
+            <div class="col-sm-12 col-md-push-4 col-md-4">
               <nav aria-label="Page navigation">
                 <ul class="pagination pagination-lg obj-center">
                   <li>
@@ -109,10 +105,46 @@
       </div>
     </div>
 
+    <!-- Menu detail, hidden type -->
+    <div id="menu-detail" class="modal">
+      <div class="modal-content">
+        <div class="modal-header mrg-btm-30">
+          <h2 id="menu-title"></h2>
+        </div>
+        <div class="modal-body">
+          <div class="row mrg-btm-30">
+            <div class="col-md-push-1 col-md-10">
+              <h2 class="text-center">Deskripsi</h2>
+              <div id="menu-description"></div>
+            </div>
+          </div>
+          <div class="row mrg-btm-30">
+            <div class="col-md-push-1 col-md-6">
+              <h2 class="text-center">Cara Membuat</h2>
+              <div id="menu-make"></div>
+            </div>
+            <div class="col-md-5">
+              <h2 class="text-center">Sejarah</h2>
+              <div id="menu-history"></div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="row">
+            <div class="col-md-6">
+              <h3 id="menu-price" class="pull-left"></h3>
+            </div>
+            <div class="col-md-6">
+              <span class="close">&times;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script type="text/javascript" src="assets/jquery/jquery.js"></script>
     <script type="text/javascript" src="assets/custom/js/general.js"></script>
-    <script type="text/javascript" src="assets/custom/js/data.js"></script>
+    <script type="text/javascript" src="assets/slick/slick.js"></script>
     <script type="text/javascript" src="assets/bootstrap/js/bootstrap.js"></script>
   </body>
 </html>
