@@ -198,8 +198,7 @@ h2.menu-title {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
+  bottom: 0px;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
@@ -213,14 +212,15 @@ h2.menu-title {
 
 /* Modal Content */
 .modal-content {
-  position: fixed;
-  bottom: 0;
+  position: relative;
+  bottom: 0px;
   background-color: #fefefe;
   width: 100%;
   -webkit-animation-name: slideIn;
   -webkit-animation-duration: 0.4s;
   animation-name: slideIn;
   animation-duration: 0.4s
+
 }
 
 /* The Close Button */
